@@ -753,6 +753,7 @@ export default function Home() {
                         src={member.image}
                         alt={member.name}
                         fill
+                        sizes="80px"
                         className="object-cover group-active:scale-110 transition-transform duration-300"
                       />
                       <div
@@ -798,6 +799,7 @@ export default function Home() {
                         src={member.image}
                         alt={member.name}
                         fill
+                        sizes="(max-width: 1024px) 160px, 192px"
                         className="object-cover transition-all duration-500 group-hover:scale-110"
                       />
 
@@ -906,6 +908,7 @@ export default function Home() {
                     src={dept.image}
                     alt={dept.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div
@@ -1100,6 +1103,7 @@ export default function Home() {
                 src={eventDocs.find((e) => e.id === lightbox)?.image || ""}
                 alt={eventDocs.find((e) => e.id === lightbox)?.title || ""}
                 fill
+                sizes="100vw"
                 className="object-cover"
               />
               <div className="absolute bottom-0 inset-x-0 bg-linear-to-t from-black/80 via-black/40 to-transparent p-8">
@@ -1202,6 +1206,7 @@ export default function Home() {
                   src={event.image}
                   alt={event.title}
                   fill
+                  sizes="288px"
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all" />
@@ -1271,6 +1276,7 @@ export default function Home() {
                     src={event.image}
                     alt={event.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   {/* Overlay gradient */}
