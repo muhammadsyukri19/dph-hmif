@@ -149,7 +149,7 @@ const eventDocs = [
     id: 2,
     title: "Seminar Nasional NVIDIA by INFEST",
     category: "Seminar",
-    image: "/images/seminar-infest.jpg",
+    image: "/images/seminar.jpg",
     date: "Oktober 2025",
     desc: "Seminar nasional tentang tren teknologi AI dan masa depan informatika.",
   },
@@ -157,7 +157,7 @@ const eventDocs = [
     id: 3,
     title: "Takjil On The Road",
     category: "Sosial",
-    image: "/images/takjilontheroad.jpg",
+    image: "/images/berbagitakjil.jpg",
     date: "Maret 2025",
     desc: "Kegiatan sosial membagikan takjil gratis di bulan Ramadan untuk masyarakat di beberapa titik.",
   },
@@ -250,22 +250,22 @@ const timeline = [
   {
     date: "16-18 Februari 2026",
     title: "Pendaftaran Wakadep",
-    desc: "Buka pendaftaran online",
+    desc: "Pembukaan Pendaftaran Th. I",
   },
   {
     date: "19 Februari 2026",
     title: "Interview Wakadep",
-    desc: "Verifikasi dan seleksi administrasi",
+    desc: "Wawancara Tahap I Wakadep",
   },
   {
     date: "16-22 Februari 2026",
     title: "Pendaftaran Anggota",
-    desc: "Interview dengan DPH",
+    desc: "Pembukaan Pendaftaran Th. II",
   },
   {
     date: "23 Februari 2026",
     title: "Interview Anggota",
-    desc: "Pengumuman hasil seleksi",
+    desc: "Wawancara Tahap II Anggota",
   },
 ];
 
