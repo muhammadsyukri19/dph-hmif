@@ -746,11 +746,7 @@ export default function Home() {
                       </div>
                     )}
                     <div
-                      className={`relative w-20 h-20 rounded-full overflow-hidden shadow-lg border-3 ${
-                        isCenter
-                          ? "border-yellow-400 ring-2 ring-yellow-300 ring-offset-2"
-                          : "border-white"
-                      } transition-all duration-300 group-active:scale-110`}
+                      className={`relative w-20 h-20 rounded-full overflow-hidden shadow-lg border-3 border-white transition-all duration-300 group-active:scale-110`}
                     >
                       <Image
                         src={member.image}
