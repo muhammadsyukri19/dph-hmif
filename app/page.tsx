@@ -562,8 +562,8 @@ export default function Home() {
           <Image
             src="/icon/hmif.png"
             alt="HMIF Background"
-            width={300}
-            height={300}
+            width={600}
+            height={600}
             className="absolute top-1/4 -left-20 -translate-y-1/2 w-[250px] md:w-[300px] h-auto object-contain opacity-50 blur-[9px] rotate-[-30deg]"
             priority
           />
@@ -571,8 +571,8 @@ export default function Home() {
           <Image
             src="/icon/hmif.png"
             alt="HMIF Background"
-            width={800}
-            height={800}
+            width={600}
+            height={600}
             className="absolute top-2/3 -right-50 -translate-y-1/2 w-[600px] md:w-[700px] h-auto object-contain opacity-50 blur-[4px] rotate-[15deg]"
           />
         </div>
