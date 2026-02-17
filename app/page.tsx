@@ -70,6 +70,7 @@ const departments = [
       "Departemen Penelitian dan Pengembangan Mahasiswa adalah departemen yang berfungsi untuk pengembangan kemampuan dan penalaran mahasiswa Jurusan Informatika.",
     image: "/oprec/oprec-8.jpg",
     color: "from-purple-500 to-purple-700",
+    link: "https://ppm-hmif.vercel.app/",
   },
   {
     id: 2,
@@ -79,6 +80,7 @@ const departments = [
       "Departemen Pengelolaan Kesejahteraan Mahasiswa adalah departemen yang berfungsi untuk meningkatkan potensi, kreativitas, dan memperjuangkan hak-hak maupun aspirasi mahasiswa-mahasiswi Informatika, mampu mensinergikan antara mahasiswa dan birokrasi untuk mencapai tujuan tertentu.",
     image: "/oprec/oprec-4.jpg",
     color: "from-red-500 to-pink-600",
+    link: "http://pkm-53g3.vercel.app/",
   },
   {
     id: 3,
@@ -97,6 +99,7 @@ const departments = [
       "Departemen Hubungan Antar Lembaga (HUAL) merupakan departemen yang bertugas untuk menjaga dan memperluas jaringan dengan berbagai lembaga-lembaga baik dalam lingkup eksternal maupun internal di Jurusan Informatika USK.",
     image: "/oprec/oprec-2.jpg",
     color: "from-red-600 to-purple-600",
+    link: "http://hual.athazayyan.me/",
   },
   {
     id: 5,
@@ -929,23 +932,49 @@ export default function Home() {
                   >
                     {dept.description}
                   </p>
-                  <div className="mt-4 flex items-center text-purple-600 text-sm font-semibold">
-                    <span>
-                      {selectedDept === dept.id ? "Tutup" : "Lihat Detail"}
-                    </span>
-                    <svg
-                      className={`w-4 h-4 ml-2 transition-transform ${selectedDept === dept.id ? "rotate-180" : ""}`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
+                  <div className="mt-4 flex items-center justify-between gap-2">
+                    <button className="flex items-center text-purple-600 text-sm font-semibold hover:text-purple-700 transition-colors">
+                      <span>
+                        {selectedDept === dept.id ? "Tutup" : "Lihat Detail"}
+                      </span>
+                      <svg
+                        className={`w-4 h-4 ml-2 transition-transform ${selectedDept === dept.id ? "rotate-180" : ""}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </button>
+                    {selectedDept === dept.id && dept.link && (
+                      <a
+                        href={dept.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center gap-1 px-4 py-2 bg-linear-to-r from-purple-600 to-red-600 text-white text-xs font-semibold rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
+                      >
+                        <span>Lihat Selengkapnya</span>
+                        <svg
+                          className="w-3 h-3"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                          />
+                        </svg>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -1472,7 +1501,7 @@ export default function Home() {
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
             <p>
               &copy; 2026 HMIF USK. All rights reserved. Made by DPH HMIF 2026,
-              Cabinet... *CS*!
+              Kabinet... *Coming Soon*!
             </p>
           </div>
         </div>
