@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
+import RegistrationModal from "@/components/RegistrationModal";
 
 const dphMembers = [
   {
@@ -14,13 +15,13 @@ const dphMembers = [
   {
     name: "Bendahara Umum",
     role: "Fira Ramadhani",
-    image: "/person/fira.jpg",
+    image: "/person/fira.jpeg",
     gradient: "from-orange-500 to-red-600",
   },
   {
     name: "Wakil Ketua I",
     role: "Muhammad Milan Ramadhan Mulizar",
-    image: "/person/milan.jpg",
+    image: "/person/milan.png",
     gradient: "from-pink-500 to-purple-600",
   },
   {
@@ -38,13 +39,13 @@ const dphMembers = [
   {
     name: "Sekretaris Umum",
     role: "Shafa Disya Aulia",
-    image: "/person/shafa.jpg",
+    image: "/person/shafa.jpeg",
     gradient: "from-violet-500 to-purple-700",
   },
   {
     name: "Wakil Sekretaris Umum",
     role: "Niswatul Azimah",
-    image: "/person/syukri.jpg",
+    image: "/person/niswa.jpeg",
     gradient: "from-rose-500 to-red-700",
   },
 ];
@@ -198,7 +199,7 @@ const eventDocs = [
     category: "Kompetisi",
     image: "/images/hackathon.jpg",
     date: "November 2025",
-    desc: "Kompetisi coding 24 jam tingkat nasional dengan tema inovasi teknologi dan ekonomi digital.",
+    desc: "Kompetisi coding 12 jam tingkat nasional dengan tema inovasi teknologi dan ekonomi digital.",
   },
   {
     id: 9,
@@ -277,6 +278,7 @@ export default function Home() {
   const [activeFilter, setActiveFilter] = useState("Semua");
   const [lightbox, setLightbox] = useState<number | null>(null);
   const [marqueeHovered, setMarqueeHovered] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Scroll-triggered reveal
   function useInView(threshold = 0.15) {
@@ -433,8 +435,8 @@ export default function Home() {
               {/* <div className="w-10 h-10 bg-linear-to-br from-purple-600 to-red-600 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
                 <span className="text-white font-bold text-lg">H</span>
               </div> */}
-              <div className="hidden sm:block">
-                <div className="font-bold text-gray-800 text-lg leading-tight">
+              <div>
+                <div className="font-bold text-gray-800 text-base sm:text-lg leading-tight">
                   HMIF USK 2026
                 </div>
                 <div className="text-xs text-gray-500">Open Recruitment</div>
@@ -461,12 +463,12 @@ export default function Home() {
               >
                 Timeline
               </a>
-              <a
-                href="#daftar"
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="px-6 py-2 bg-linear-to-r from-purple-600 to-red-600 text-white rounded-full font-semibold hover:shadow-lg hover:scale-105 transition-all"
               >
                 Daftar Sekarang
-              </a>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -535,13 +537,15 @@ export default function Home() {
               >
                 Timeline
               </a>
-              <a
-                href="#daftar"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  setIsModalOpen(true);
+                }}
                 className="px-6 py-2 bg-linear-to-r from-purple-600 to-red-600 text-white rounded-full font-semibold hover:shadow-lg text-center transition-all"
               >
                 Daftar Sekarang
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -569,7 +573,7 @@ export default function Home() {
             alt="HMIF Background"
             width={800}
             height={800}
-            className="absolute top-2/3 -right-50 -translate-y-1/2 w-[600px] md:w-[700px] h-auto object-contain opacity-50 blur-[3px] rotate-[15deg]"
+            className="absolute top-2/3 -right-50 -translate-y-1/2 w-[600px] md:w-[700px] h-auto object-contain opacity-50 blur-[4px] rotate-[15deg]"
           />
         </div>
 
@@ -642,14 +646,14 @@ export default function Home() {
             <div className="flex gap-4 justify-center flex-wrap">
               <a
                 href="#departments"
-                className="group relative px-8 py-4 bg-linear-to-r from-purple-600 to-red-600 text-white rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
+                className="group relative px-10 py-4 bg-linear-to-r from-purple-600 to-red-600 text-white rounded-full font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10">Lihat Departemen</span>
                 <div className="absolute inset-0 bg-linear-to-r from-red-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </a>
               <a
                 href="https://drive.google.com/file/d/1WULvZ4qUsjAr6TlZpsF9ptSxmWxYpKPM/view?usp=drivesdk"
-                className="group relative px-8 py-4 bg-white border-2 border-purple-600 text-purple-600 rounded-full font-semibold hover:bg-purple-50 hover:scale-105 transition-all duration-300 overflow-hidden"
+                className="group relative px-6 py-4 bg-white border-2 border-purple-600 text-purple-600 rounded-full font-semibold hover:bg-purple-50 hover:scale-105 transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10">Deskripsi Departemen</span>
               </a>
@@ -1365,13 +1369,13 @@ export default function Home() {
             jadilah bagian dari keluarga besar HMIF ITB.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href="#"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="group relative px-10 py-4 bg-white text-purple-600 rounded-full font-bold text-lg hover:bg-gray-100 hover:scale-110 transition-all shadow-xl overflow-hidden"
             >
               <span className="relative z-10">Daftar Sekarang</span>
               <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-linear-to-r from-transparent via-white/50 to-transparent"></div>
-            </a>
+            </button>
             <a
               href="#departments"
               className="px-10 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-purple-600 hover:scale-110 transition-all duration-300"
@@ -1425,7 +1429,7 @@ export default function Home() {
                   >
                     <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.057v-3.057h2.994c-.059 1.143-.212 2.24-.456 3.279-.823-.12-1.674-.188-2.538-.222zm1.957 2.162c-.499 1.33-1.159 2.497-1.957 3.456v-3.62c.666.028 1.319.081 1.957.164zm-1.957-7.219v-3.015c.868-.034 1.721-.103 2.548-.224.238 1.027.389 2.111.446 3.239h-2.994zm0-5.014v-3.661c.806.969 1.471 2.15 1.971 3.496-.642.084-1.3.137-1.971.165zm2.703-3.267c1.237.496 2.354 1.228 3.29 2.146-.642.234-1.311.442-2.019.607-.344-.992-.775-1.91-1.271-2.753zm-7.241 13.56c-.244-1.039-.398-2.136-.456-3.279h2.994v3.057c-.865.034-1.714.102-2.538.222zm2.538 1.776v3.62c-.798-.959-1.458-2.126-1.957-3.456.638-.083 1.291-.136 1.957-.164zm-2.994-7.055c.057-1.128.207-2.212.446-3.239.827.121 1.68.19 2.548.224v3.015h-2.994zm1.024-5.179c.5-1.346 1.165-2.527 1.97-3.496v3.661c-.671-.028-1.329-.081-1.97-.165zm-2.005-.35c-.708-.165-1.377-.373-2.018-.607.937-.918 2.053-1.65 3.29-2.146-.496.844-.927 1.762-1.272 2.753zm-.549 1.918c-.264 1.151-.434 2.36-.492 3.611h-3.933c.165-1.658.739-3.197 1.617-4.518.88.361 1.816.67 2.808.907zm.009 9.262c-.988.236-1.92.542-2.797.9-.89-1.328-1.471-2.879-1.637-4.551h3.934c.058 1.265.231 2.488.5 3.651zm.553 1.917c.342.976.768 1.881 1.257 2.712-1.223-.49-2.326-1.211-3.256-2.115.636-.229 1.299-.435 1.999-.597zm9.924 0c.7.163 1.362.367 1.999.597-.931.903-2.034 1.625-3.257 2.116.489-.832.915-1.737 1.258-2.713zm.553-1.917c.27-1.163.442-2.386.501-3.651h3.934c-.167 1.672-.748 3.223-1.638 4.551-.877-.358-1.81-.664-2.797-.9zm.501-5.651c-.058-1.251-.229-2.46-.492-3.611.992-.237 1.929-.546 2.809-.907.877 1.321 1.451 2.86 1.616 4.518h-3.933z" />
                   </svg>
-                  hmif.usk.ac.id
+                  hmifusk.org
                 </li>
               </ul>
             </div>
@@ -1653,6 +1657,12 @@ export default function Home() {
           overflow: hidden;
         }
       `}</style>
+
+      {/* Registration Modal */}
+      <RegistrationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 }
