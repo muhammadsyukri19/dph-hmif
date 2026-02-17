@@ -8,37 +8,37 @@ const dphMembers = [
   {
     name: "Wakil Bendahara Umum",
     role: "Aska Shahira",
-    image: "/person/syukri.jpg",
+    image: "/person/aska.jpg",
     gradient: "from-amber-500 to-orange-600",
   },
   {
     name: "Bendahara Umum",
     role: "Fira Ramadhani",
-    image: "/images/syukri.jpg",
+    image: "/person/fira.jpg",
     gradient: "from-orange-500 to-red-600",
   },
   {
     name: "Wakil Ketua I",
     role: "Muhammad Milan Ramadhan Mulizar",
-    image: "/images/syukri.jpg",
+    image: "/person/milan.jpg",
     gradient: "from-pink-500 to-purple-600",
   },
   {
     name: "Ketua Himpunan",
     role: "Muhammad Syukri",
-    image: "/images/syukri.jpg",
+    image: "/person/syukri.jpg",
     gradient: "from-purple-600 to-red-600",
   },
   {
     name: "Wakil Ketua II",
     role: "Ariq Rabbani",
-    image: "/images/syukri.jpg",
+    image: "/person/ariq.jpg",
     gradient: "from-red-500 to-purple-600",
   },
   {
     name: "Sekretaris Umum",
     role: "Shafa Disya Aulia",
-    image: "/images/syukri.jpg",
+    image: "/person/shafa.jpg",
     gradient: "from-violet-500 to-purple-700",
   },
   {
