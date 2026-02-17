@@ -44,7 +44,7 @@ const dphMembers = [
   {
     name: "Wakil Sekretaris Umum",
     role: "Niswatul Azimah",
-    image: "/images/syukri.jpg",
+    image: "/person/syukri.jpg",
     gradient: "from-rose-500 to-red-700",
   },
 ];
@@ -138,7 +138,7 @@ const departments = [
 const eventDocs = [
   {
     id: 1,
-    title: "Ngobrol Bareng Bidang Minat (NGOBAR)", 
+    title: "Ngobrol Bareng Bidang Minat (NGOBAR)",
     category: "Seminar",
     image: "/images/ngobar.jpg",
     date: "Mei 2025",
@@ -632,7 +632,7 @@ export default function Home() {
               HMIF USK 2026
             </h1>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              Dewan Perwakilan Himpunan
+              Dewan Pengurus Harian
             </h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed">
               Bergabunglah dengan kami dalam membangun Himpunan Mahasiswa
