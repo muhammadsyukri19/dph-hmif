@@ -1397,7 +1397,7 @@ export default function Home() {
           </h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
             Jangan lewatkan kesempatan emas ini! Daftarkan dirimu sekarang dan
-            jadilah bagian dari keluarga besar HMIF ITB.
+            jadilah bagian dari keluarga besar HMIF USK.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <button
