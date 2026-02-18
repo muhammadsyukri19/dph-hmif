@@ -209,7 +209,7 @@ const eventDocs = [
     title: "INTEGER x UPGRADING",
     category: "Sosial",
     image: "/images/integer.jpg",
-    date: "Januari 2026",
+    date: "Fenruari 2025",
     desc: "Acara kebersamaan seluruh anggota HMIF sekaligus penyambutan mahasiwa baru dengan berbagai games seru dan makan bersama.",
   },
 ];
