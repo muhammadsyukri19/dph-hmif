@@ -185,7 +185,7 @@ const eventDocs = [
     title: "Kunjungan Panti HMIF",
     category: "Sosial",
     image: "/images/kunjunganpanti.jpg",
-    date: "Desember 2025",
+    date: "Mei 2025",
     desc: "Kegiatan sosial rutin HMIF mengunjungi panti asuhan untuk berbagi kebahagiaan dan bantuan kepada anak-anak.",
   },
   {
@@ -201,7 +201,7 @@ const eventDocs = [
     title: "Hackathon x IndigoSpace by INFEST XI",
     category: "Kompetisi",
     image: "/images/hackathon.jpg",
-    date: "November 2025",
+    date: "Oktober 2025",
     desc: "Kompetisi coding 12 jam tingkat nasional dengan tema inovasi teknologi dan ekonomi digital.",
   },
   {
