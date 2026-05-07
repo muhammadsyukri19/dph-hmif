@@ -1,6 +1,6 @@
-# HMIF ITB - Open Recruitment Website
+# HMIF USK - Open Recruitment Website
 
-Website landing page untuk Open Recruitment Dewan Perwakilan Himpunan (DPH) HMIF ITB 2026.
+Website landing page untuk Open Recruitment Dewan Perwakilan Himpunan (DPH) HMIF USK 2026.
 
 ## 🎨 Fitur Desain
 
@@ -30,14 +30,14 @@ Website landing page untuk Open Recruitment Dewan Perwakilan Himpunan (DPH) HMIF
 
 Setiap departemen memiliki:
 
-- **LITBANG** - Penelitian dan Pengembangan Mahasiswa
+- **PPM** - Penelitian dan Pengembangan Mahasiswa
 - **PKM** - Pengelola Kesejahteraan Mahasiswa
-- **KOMINFO** - Komunikasi, Informasi & Perencanaan
-- **HARLEB** - Hubungan Antar Lembaga
-- **ADIN** - Administrasi dan Inventaris
+- **KOMINKRAF** - Komunikasi, Informasi & Perencanaan
+- **HUAL** - Hubungan Antar Lembaga
+- **ADM** - Administrasi dan Inventaris
 - **SOSMAS** - Sosial Masyarakat
-- **MIBAT** - Minat, Bakat dan Apresiasi
-- **ROHIS** - Keagamaan
+- **MBA** - Minat, Bakat dan Apresiasi
+- **KEAGAMAAN** - Keagamaan
 
 Fitur kartu departemen:
 
@@ -74,7 +74,7 @@ Timeline open recruitment dengan format visual:
 
 ### 7. Footer
 
-- Informasi HMIF ITB
+- Informasi HMIF USK
 - Kontak
 - Quick Links
 
@@ -122,14 +122,14 @@ hmif-newgen/
 │   └── globals.css       # Global styles & custom scrollbar
 ├── public/
 │   └── oprec/
-│       ├── oprec-1.jpg   # Flyer LITBANG
+│       ├── oprec-1.jpg   # Flyer PPM
 │       ├── oprec-2.jpg   # Flyer PKM
-│       ├── oprec-3.jpg   # Flyer KOMINFO
-│       ├── oprec-4.jpg   # Flyer HARLEB
-│       ├── oprec-5.jpg   # Flyer ADIN
+│       ├── oprec-3.jpg   # Flyer KOMINKRAF
+│       ├── oprec-4.jpg   # Flyer HUAL
+│       ├── oprec-5.jpg   # Flyer ADM
 │       ├── oprec-6.jpg   # Flyer SOSMAS
-│       ├── oprec-7.jpg   # Flyer MIBAT
-│       └── oprec-8.jpg   # Flyer ROHIS
+│       ├── oprec-7.jpg   # Flyer MBA
+│       └── oprec-8.jpg   # Flyer KEAGAMAAN
 └── ...
 ```
 
@@ -159,7 +159,7 @@ const departments = [
   {
     id: 1,
     name: "PENELITIAN DAN PENGEMBANGAN MAHASISWA",
-    shortName: "LITBANG",
+    shortName: "PPM",
     description: "Deskripsi departemen...",
     image: "/oprec/oprec-1.jpg",
     color: "from-purple-500 to-purple-700",
@@ -202,12 +202,12 @@ const benefits = [
 
 ## 📧 Support
 
-Untuk pertanyaan atau bantuan, hubungi DPH HMIF ITB:
+Untuk pertanyaan atau bantuan, hubungi DPH HMIF USK:
 
-- Email: hmif@itb.ac.id
-- Instagram: @hmif_itb
-- Website: hmif.itb.ac.id
+- Email: hmif@USK.ac.id
+- Instagram: @hmif_USK
+- Website: hmif.USK.ac.id
 
 ---
 
-**Made with ❤️ by DPH HMIF ITB**
+**Made with ❤️ by DPH HMIF USK**
